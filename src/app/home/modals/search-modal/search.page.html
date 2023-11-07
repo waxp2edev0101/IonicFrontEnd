@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="articleModalTitle">
+      <span>Search</span>
+    </ion-title>
+    <button class="searchClose" (click)="closeModal()">X</button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollY=false>  
+  <div class="searchBody">
+    <div class="searchBreak"></div>    
+    <ion-grid>
+      <ion-row>
+        <ion-col size=1>
+          <ion-menu-button autoHide=false (click)="openSelector()">+</ion-menu-button>          
+          <ion-select style="opacity:0; height: 0px;" [interfaceOptions]="builderBlockOptions" #builderSelector (ionCancel)="cancelNewControlBlock()" (ionBlur)="requestNewControlBlock()">
+            <ion-select-option value="keyword">Keyword</ion-select-option>
+            <ion-select-option value="topstories">Top Story</ion-select-option>
+          </ion-select>
+        </ion-col>
+        <ion-col class="searchCaption">
+          <ion-select [interfaceOptions]="carouselBlockOptions" #carouselSelector (ionChange)="changeControlBlock()">
+            <ion-select-option *ngFor="let block of this.controlBlock" value={{getBlockID(block)}}>{{block["name"]}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+        <ion-col style="position: relative; top: 15px" size=1>
+          <ion-img  src="assets/Mini-pencil-icon.svg" (click)="editControlBlock()"></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row style="background-color: gray;">
+        <ion-col>Dates</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="searchCaption">From</ion-col>      
+        <ion-col><ion-datetime placeholder="Choose Date" value={{this.fromDate}} (ionChange)="setDate(0, $event)"></ion-datetime></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="searchCaption">To</ion-col>      
+        <ion-col><ion-datetime placeholder="Choose Date" value={{this.toDate}} (ionChange)="setDate(1, $event)"></ion-datetime></ion-col>
+      </ion-row>
+      <ion-row style="background-color: gray;">
+        <ion-col>General</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="searchCaption">Text</ion-col>      
+        <ion-col><ion-input placeholder="Text Search" value={{this.searchText}} (ionChange)="setText(0, $event)"></ion-input></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <div class="searchFooter">
+    <ion-button class="searchButton" (click)="closeModal(true)">Search</ion-button>
+    <ion-button class="searchButton" (click)="deleteControlBlock()" color="danger">Delete</ion-button>
+  </div>
+</ion-footer>

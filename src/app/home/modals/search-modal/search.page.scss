@@ -1,0 +1,54 @@
+.searchBody {
+  background-color: black;
+  color: white;
+  padding: 30px;
+  padding-top: 15px;
+  height: 100%;
+}
+
+.searchBreak {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  right: 10px;
+  border-top: 1px solid rgb(160, 160, 160);
+}
+
+.searchCaption {
+  position: relative;
+  align-self: center;
+}
+
+.searchFooter {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+
+.searchButton {
+  position: relative;
+  margin: 5px;
+}
+
+.searchClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  line-height: 14px;
+  min-width: auto;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  font-size: large;
+  border-radius: 100%;
+  border-color: gray;
+  border-width: 2px;
+  border-style: solid;
+}
+
+ion-select {
+  --padding-start: 0;
+}

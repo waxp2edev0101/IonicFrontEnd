@@ -1,0 +1,116 @@
+.articleModalTitle {
+  text-align: center;
+  position: relative;
+}
+
+.fa-bookmark {
+  position: absolute;
+  left: 15px;
+  width: 15px;
+}
+
+.articleBody {
+  background-color: black;
+  color: white;
+  padding: 30px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.articleBreak {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  right: 10px;
+  border-top: 1px solid rgb(160, 160, 160);
+}
+
+.articleHeader {
+  position: relative;
+  padding-bottom: 15px;
+  display: flex;
+  font-size: xx-large;
+}
+
+.favicon {
+  height: 32px;
+  width: 32px;
+  background-color: white;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 2px;
+  overflow: hidden;
+  margin-left: 50px;
+  margin-top: 12px;
+}
+
+.collectionBox {
+  padding: 10px;
+  flex: 1 1 70%;
+  background: linear-gradient(
+    70deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(255, 0, 92, 0.8) 50%
+  );
+}
+
+.articleTitle {
+  font-size: x-large;
+  font-style: italic;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+.articleContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.articleText {
+  font-weight: 500;
+}
+.articleShading {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  height: 80px;
+  background-image: linear-gradient(to bottom, transparent, black);
+}
+
+.articleFooter {
+  position: static;
+  margin-top: 10px;
+  bottom: 10px;
+  height: 50px;
+}
+
+.articleLink {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.articleLink:visited {
+  color: white;
+}
+
+.articleClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  line-height: 14px;
+  min-width: auto;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  font-size: large;
+  border-radius: 100%;
+  border-color: gray;
+  border-width: 2px;
+  border-style: solid;
+}

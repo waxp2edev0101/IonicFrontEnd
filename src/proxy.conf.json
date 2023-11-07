@@ -1,0 +1,6 @@
+{
+    "/*": {
+        "target": "http://api.citefulldev.com",
+        "secure": false
+    }
+}
